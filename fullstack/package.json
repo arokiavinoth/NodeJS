@@ -1,0 +1,16 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "Full Stack Application Example.",
+  "license": "ISC",
+  "author": "Vinoth",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

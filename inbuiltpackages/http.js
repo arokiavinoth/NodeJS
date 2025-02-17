@@ -5,4 +5,4 @@ let server = http.createServer((req, res) => {
   res.end();
 });
 
-server.listen(7700, ()=>{});
+server.listen(7700, () => {});
