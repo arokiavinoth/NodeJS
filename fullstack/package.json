@@ -14,5 +14,8 @@
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "mongodb": "^6.13.1"
+  },
+  "devDependencies": {
+    "prettier": "3.5.1"
   }
 }
