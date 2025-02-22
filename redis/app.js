@@ -15,15 +15,6 @@ client.on('error', (err) => {
   console.log('Redis Client Error. . ! ' + err);
 });
 
-// client
-//   .connect()
-//   .then(() => {
-//     console.log('Connected to Redis');
-//   })
-//   .catch((err) => {
-//     console.error('Failed to connect to Redis', err);
-//   });
-
 app.get('/data', async (req, res) => {
   await client.connect();
   let userInput = req.query.country.trim();
@@ -50,19 +41,6 @@ app.get('/data', async (req, res) => {
   }
   await client.disconnect();
 });
-
-// process.on('SIGINT', () => {
-//   client
-//     .disconnect()
-//     .then(() => {
-//       console.log('Disconnected from Redis');
-//       process.exit(0);
-//     })
-//     .catch((err) => {
-//       console.error('Failed to disconnect from Redis', err);
-//       process.exit(1);
-//     });
-// });
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
