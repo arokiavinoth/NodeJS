@@ -4,6 +4,7 @@ dotenv.config();
 import cors from 'cors';
 import { dbConnect } from './controller/dbController';
 import locationRouter from './controller/locationRouter';
+import restaurantRouter from './controller/restaurantRouter';
 
 //import router from './controller/locationRouter';
 
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/api', locationRouter);
 //app.use('/api', router);
+app.use('/api', restaurantRouter);
 
 app.listen(port, () => {
   dbConnect();

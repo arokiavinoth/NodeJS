@@ -2,11 +2,19 @@
 
 # List of all city (GET)
 
+\*http://localhost:9888/api/locations
+
 # List of All restaurant (GET)
+
+\*http://localhost:9888/api/restaurants
 
 # Restaurant WRT City (GET)
 
+\*http://localhost:9888/api/restaurants?stateId=3
+
 # List of All Meal (GET)
+
+\*http://localhost:9888/api/mealtypes
 
 //Page 2 (Listing Page)
 
@@ -23,6 +31,8 @@
 //Page 3 (Details Page)
 
 # Details of Restaurant WRT to ID (GET)
+
+\*http://localhost:9888/api/restaurant/2
 
 # Menu WRT Restaurant (GET)
 
