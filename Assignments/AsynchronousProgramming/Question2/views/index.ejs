@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Employee List</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% employees.forEach(employee => { %>
+        <tr>
+          <td><%= employee.name %></td>
+          <td><%= employee.id %></td>
+          <td><%= new Date(employee.createdAt).toLocaleString() %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
