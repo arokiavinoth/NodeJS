@@ -52,4 +52,19 @@ restaurantRouter.route('/restaurant/:id').get(async (req, res) => {
   }
 });
 
+restaurantRouter.route('/restaurants/filters/:mealid').get(async (req, res) => {
+  try {
+    let mealId = Number(req.params.mealid);
+    let data = await getData('restaurants', {
+      'mealTypes.mealtype_id': mealId,
+    });
+    res.status(200).json(data);
+  } catch (error) {
+    console.log(
+      `${__filename} -- Error while fetching records from collection ${error}`
+    );
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 export default restaurantRouter;

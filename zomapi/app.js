@@ -7,7 +7,7 @@ import locationRouter from './controller/locationRouter';
 import restaurantRouter from './controller/restaurantRouter';
 
 //import router from './controller/locationRouter';
-
+//let locationRouter = require('./controller/locationRouter')();
 let app = express();
 let port = process.env.PORT_NUMBER || 3000;
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', locationRouter);
-//app.use('/api', router);
+//app.use('/api', locationRouter);
 app.use('/api', restaurantRouter);
 
 app.listen(port, () => {

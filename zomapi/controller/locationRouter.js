@@ -22,7 +22,7 @@ const locationRouter = express.Router();
 //   return locationRouter;
 // }
 
-//export default router;
+// module.exports = router;
 
 const basic_User_Name = process.env.BASIC_AUTH_USERNAME;
 const basic_Password = process.env.BASIC_AUTH_PASSWORD;
@@ -41,7 +41,7 @@ const basicAuth = (req, res, next) => {
     next();
   } else {
     res.status(401).send('Unauthorized');
-  }  
+  }
 };
 
 locationRouter.route('/locations').get(async (req, res) => {
